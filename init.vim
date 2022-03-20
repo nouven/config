@@ -8,6 +8,7 @@ source ~/.config/nvim/config/telescope.rc.vim
 source ~/.config/nvim/config/lsp-colors.rc.vim
 source ~/.config/nvim/config/lsp-colors.rc.vim
 source ~/.config/nvim/config/lspkind.lua
+source ~/.config/nvim/config/autoformat.vim
 "source ~/.config/nvim/config/coc.vim
 "source ~/.config/nvim/config/treesitter.rc.vim
 
