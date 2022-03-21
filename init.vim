@@ -6,9 +6,9 @@ source ~/.config/nvim/config/lspsaga.rc.vim
 source ~/.config/nvim/config/cmp.rc.vim
 source ~/.config/nvim/config/telescope.rc.vim
 source ~/.config/nvim/config/lsp-colors.rc.vim
-source ~/.config/nvim/config/lsp-colors.rc.vim
 source ~/.config/nvim/config/lspkind.lua
 source ~/.config/nvim/config/autoformat.vim
+source ~/.config/nvim/config/floaterm.vim
 "source ~/.config/nvim/config/coc.vim
 "source ~/.config/nvim/config/treesitter.rc.vim
 
@@ -27,7 +27,6 @@ set encoding=UTF-8
 
 set hlsearch 	" Highlight all search results
 set hlsearch
-hi Search ctermbg=DarkYellow
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
@@ -59,6 +58,7 @@ set background=dark
 set hidden
 set cursorline
 hi cursorline cterm=NONE ctermbg=NONE
-hi Visual cterm=bold ctermfg=cyan ctermbg=darkgray
+hi Search cterm=bold ctermfg=black ctermbg=darkyellow
+hi Visual cterm=none ctermfg=darkyellow ctermbg=darkgrey
 lua << EOF
 EOF

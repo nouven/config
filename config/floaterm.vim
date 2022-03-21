@@ -9,7 +9,7 @@ nnoremap   <silent>   <F12>    :FloatermNew <CR>
 tnoremap   <silent>   <F12>    <C-\><C-n>:FloatermNew<CR>
 noremap   <silent>   <F12>    <C-\><C-n>:FloatermNew<CR>
 let g:floaterm_position='topright'
-let g:floaterm_width=0.85
+let g:floaterm_width=0.8
 let g:floaterm_height=0.7
 let g:floaterm_title='Term $1/$2'
 let g:floaterm_wintype='float'
