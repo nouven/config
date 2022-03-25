@@ -34,7 +34,7 @@ lspconfig.tsserver.setup{
 lspconfig.html.setup{
    cmd = {"html-languageserver", "--stdio"};
    on_attach = on_attach;
-   filetypes = {"html", "css"};
+   filetypes = {"html", "css", "hbs"};
    root_dir = function() return vim.loop.cwd() end
 }
 
@@ -43,7 +43,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.emmet_ls.setup{
       cmd = {'emmet-ls', '--stdio'};
-      filetypes = {'html', 'css'};
+      filetypes = {'html', 'css', 'hbs'};
       root_dir = function(fname)    
         return vim.loop.cwd()
       end;    

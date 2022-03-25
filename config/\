@@ -1,0 +1,6 @@
+lua << EOF
+vim.opt.termguicolors = true
+vim.opt.transparent = true
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+EOF

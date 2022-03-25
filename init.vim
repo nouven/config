@@ -4,15 +4,15 @@ source ~/.config/nvim/plugs.vim
 source ~/.config/nvim/config/lspconfig.rc.vim
 source ~/.config/nvim/config/lspsaga.rc.vim
 source ~/.config/nvim/config/cmp.rc.vim
-source ~/.config/nvim/config/telescope.rc.vim
-source ~/.config/nvim/config/lsp-colors.rc.vim
 source ~/.config/nvim/config/lspkind.lua
-source ~/.config/nvim/config/autoformat.vim
+source ~/.config/nvim/config/telescope.rc.vim
+source ~/.config/nvim/config/lspcolors.vim
+source ~/.config/nvim/config/colortheme.vim
+source ~/.config/nvim/config/lualine.vim
+source ~/.config/nvim/config/lsp-format.vim
 source ~/.config/nvim/config/floaterm.vim
-"source ~/.config/nvim/config/coc.vim
 "source ~/.config/nvim/config/treesitter.rc.vim
 
-" base settup
 
 noremap <Leader>y "*y
 noremap <Leader>p "*p
@@ -23,7 +23,6 @@ noremap <Leader>P "+p
 syntax on     
 set guioptions+=a
 set encoding=UTF-8
-"set guifont=DroidSansMono
 
 set hlsearch 	" Highlight all search results
 set hlsearch
@@ -56,9 +55,8 @@ set autowriteall	" Auto-write all file changes
 set undolevels=1000	" Number of undo levels
 set background=dark
 set hidden
-set cursorline
+"set cursorline
+
 hi cursorline cterm=NONE ctermbg=NONE
-hi Search cterm=bold ctermfg=black ctermbg=darkyellow
-hi Visual cterm=none ctermfg=darkyellow ctermbg=darkgrey
-lua << EOF
-EOF
+hi Search cterm=bold ctermfg=black ctermbg=lightgrey
+hi Visual cterm=none ctermfg=darkcyan ctermbg=darkgrey

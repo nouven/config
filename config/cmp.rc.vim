@@ -8,6 +8,7 @@ local lspkind = require'lspkind'
 local lspsaga = require'lspsaga'
 
 
+
 cmp.setup({
 
 snippet = {
@@ -52,6 +53,7 @@ mapping = {
     format = lspkind.cmp_format({
       with_text = true,
       maxwidth = 50,
+      transparent = true,
       mode = 'symbol',
 
 
