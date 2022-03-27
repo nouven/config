@@ -42,8 +42,8 @@ lspconfig.html.setup{
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.emmet_ls.setup{
-      cmd = {'emmet-ls', '--stdio'};
-      filetypes = {'html', 'css', 'hbs'};
+      cmd = {"emmet-ls", "--stdio"};
+      filetypes = {"html", "css", "handlebars"};
       root_dir = function(fname)    
         return vim.loop.cwd()
       end;    

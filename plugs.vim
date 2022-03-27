@@ -12,6 +12,7 @@ Plug 'morhetz/gruvbox'
 Plug 'miyakogi/seiya.vim' " clear and make transparent
 "{{ code intellisense }}
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -43,6 +44,7 @@ call plug#end()
 
 
 let g:seiya_auto_enable=1
+
 
 
 
