@@ -20,8 +20,7 @@ local configs = require'lspconfig/configs'
 lspconfig.pyright.setup{}
 --clangd ================================
 lspconfig.clangd.setup{
-   cmd = { "clangd-12", };
---"--background-index" 
+   cmd = { "clangd", };
    filetypes = { "c", "cpp", "objc", "objcpp", };
    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities());
 }
@@ -48,5 +47,11 @@ lspconfig.emmet_ls.setup{
         return vim.loop.cwd()
       end;    
       capabilities = capabilities
+}
+
+lspconfig.cssls.setup{
+   cmd = { "vscode-css-language-server" };
+   filetypes = { "css", "scss", };
+   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities());
 }
 EOF

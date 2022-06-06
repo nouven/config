@@ -1,4 +1,3 @@
-
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
@@ -42,9 +41,11 @@ mapping = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = true,
     },
- documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
+ window ={
+   documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      },
+ },
  experimental = {
     ghost_text = false,
     native_menu = false,
