@@ -5,6 +5,8 @@ local servers = {
 	"tsserver",
 	"emmet_ls",
 	"clangd",
+        "html5",
+        "jdtls",
 }
 ---@diagnostic disable-next-line: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -26,7 +28,16 @@ lsp_installer.on_server_ready(function(server)
 		on_attach = on_attach,
 		capabilities = capabilities,
 	}
-
-	server:setup(default_opts)
+        --local emmet_ls_opt = {
+	--	on_attach = on_attach,
+	--	capabilities = capabilities,
+        --        filetypes = {"html", "javascript"},
+        --}
+        --if server == "emmet_ls" then
+	--        server:setup(emmet_ls_opt)
+        --else
+	--        server:setup(default_opts)
+        --end
+        server:setup(default_opts)
 end)
 EOF

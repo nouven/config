@@ -1,17 +1,18 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.config/nvim/plugs.vim
-source ~/.config/nvim/config/lspconfig.rc.vim
-source ~/.config/nvim/config/lspsaga.rc.vim
-source ~/.config/nvim/config/cmp.rc.vim
-source ~/.config/nvim/config/lspkind.lua
+"source ~/.config/nvim/config/lspconfig/lspconfig.rc.vim
+source ~/.config/nvim/config/lspconfig/lsp-installer.vim
+source ~/.config/nvim/config/lspconfig/lspsaga.rc.vim
+source ~/.config/nvim/config/lspconfig/lspkind.lua
+source ~/.config/nvim/config/lspconfig/lspcolors.vim
+source ~/.config/nvim/config/lspconfig/lsp-format.vim
+source ~/.config/nvim/config/lspconfig/lsp-cmp.vim
 source ~/.config/nvim/config/telescope.rc.vim
-source ~/.config/nvim/config/lspcolors.vim
 source ~/.config/nvim/config/colortheme.vim
 source ~/.config/nvim/config/lualine.vim
-source ~/.config/nvim/config/lsp-format.vim
 source ~/.config/nvim/config/floaterm.vim
-"source ~/.config/nvim/config/treesitter.rc.vim
+source ~/.config/nvim/config/treesitter.rc.vim
 
 
 noremap <Leader>y "*y

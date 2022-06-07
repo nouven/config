@@ -19,8 +19,8 @@ snippet = {
 end,
 },
 mapping = {
-   ["<C-k>"] = cmp.mapping.select_prev_item(),
-   ["<C-j>"] = cmp.mapping.select_next_item(),
+   ["<C-p>"] = cmp.mapping.select_prev_item(),
+   ["<C-n>"] = cmp.mapping.select_next_item(),
    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
    ["<C-space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -29,7 +29,7 @@ mapping = {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
       },
-   ["<CR>"] = cmp.mapping.confirm { select = false},
+   ["<CR>"] = cmp.mapping.confirm { select = true},
    },
  sources = {
     { name = "nvim_lsp" },
@@ -56,8 +56,6 @@ mapping = {
       maxwidth = 50,
       transparent = true,
       mode = 'symbol',
-
-
       fields = { "kind", "abbr", "menu" },
       before = function(entry, vim_item)
       vim_item.menu = ({
@@ -73,5 +71,5 @@ mapping = {
 })
 
   -- Setup lspconfig.
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  --local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 EOF

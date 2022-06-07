@@ -15,6 +15,7 @@ local prettier = {
 --        languages = {
 --            typescript = { prettier },
 --            yaml = { prettier },
+--            cpp = {prettier}
 --        },
 --    },
 --}

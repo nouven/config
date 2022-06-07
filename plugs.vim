@@ -10,6 +10,7 @@ Plug 'scrooloose/NERDTree' " File Explorer
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'miyakogi/seiya.vim' " clear and make transparent
+
 "{{ code intellisense }}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -17,6 +18,7 @@ Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'folke/lsp-colors.nvim'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -26,12 +28,10 @@ Plug 'chun-yang/auto-pairs'
 "Plug 'andrewradev/tagalong.vim'
 " {{auto format code}}
 Plug 'lukas-reineke/lsp-format.nvim'
-
 " {{ terminal }}
 Plug 'voldikss/vim-floaterm'
 " {{ code syntax highlight }}
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " {{ debugging }}
 
 " {{icon}}
@@ -45,14 +45,8 @@ call plug#end()
 
 let g:seiya_auto_enable=1
 
-
-
-
-
 " {{  'scrooloose/NERDTree' " File Explorer }}==========================
 nmap <C-n> :NERDTreeToggle<CR>
-
-
 
 filetype indent on
 " :let g:html_indent_inctags ="body, head, tbody, script" "Indent body head
