@@ -2,11 +2,11 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.config/nvim/plugs.vim
 "source ~/.config/nvim/config/lspconfig/lspconfig.rc.vim
-source ~/.config/nvim/config/lspconfig/lsp-installer.vim
+source ~/.config/nvim/config/lspconfig/lsp-installer.lua
 source ~/.config/nvim/config/lspconfig/lspsaga.rc.vim
 source ~/.config/nvim/config/lspconfig/lspkind.lua
 source ~/.config/nvim/config/lspconfig/lspcolors.vim
-source ~/.config/nvim/config/lspconfig/lsp-format.vim
+source ~/.config/nvim/config/lspconfig/null-ls.lua
 source ~/.config/nvim/config/lspconfig/lsp-cmp.vim
 source ~/.config/nvim/config/telescope.rc.vim
 source ~/.config/nvim/config/colortheme.vim
@@ -32,8 +32,8 @@ set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
 set cindent	" Use 'C' style program indenting
 set expandtab	" Use spaces instead of tabs
-set shiftwidth=3	" Number of auto-indent spaces
-set softtabstop=3	" Number of spaces per Tab
+set shiftwidth=2	" Number of auto-indent spaces
+set softtabstop=2	" Number of spaces per Tab
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set expandtab     " use spaces Instead of tabs

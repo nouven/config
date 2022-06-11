@@ -27,7 +27,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'chun-yang/auto-pairs'
 "Plug 'andrewradev/tagalong.vim'
 " {{auto format code}}
-Plug 'lukas-reineke/lsp-format.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 " {{ terminal }}
 Plug 'voldikss/vim-floaterm'
 " {{ code syntax highlight }}
