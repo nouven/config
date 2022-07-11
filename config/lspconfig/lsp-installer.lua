@@ -7,6 +7,8 @@ local servers = {
   "html5",
   "jdtls",
   "sumneko_lua",
+  "eslint",
+  "quick_lint_js"
 }
 ---@diagnostic disable-next-line: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()

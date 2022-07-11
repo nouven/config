@@ -39,9 +39,10 @@ set smarttab	" Enable smart-tabs
 set expandtab     " use spaces Instead of tabs
 set number	" Show line numbers
 set relativenumber
+set nowrap
 set linebreak	" Break lines at word (requires Wrap lines)
-set showbreak=+++ 	" Wrap-broken line prefix
-set textwidth=100  " Line wrap (number of cols)
+"set showbreak=+++ 	" Wrap-broken line prefix
+"set textwidth=100  " Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set errorbells	" Beep or flash screen on errors
 set visualbell	" Use visual bell (no beeping)
@@ -61,3 +62,13 @@ set hidden
 hi cursorline cterm=NONE ctermbg=NONE
 hi Search cterm=bold ctermfg=black ctermbg=lightgrey
 hi Visual cterm=none ctermfg=darkcyan ctermbg=darkgrey
+
+
+
+
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+noremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+
