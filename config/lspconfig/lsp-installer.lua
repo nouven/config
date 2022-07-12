@@ -8,7 +8,8 @@ local servers = {
   "jdtls",
   "sumneko_lua",
   "eslint",
-  "quick_lint_js"
+  "quick_lint_js",
+  "tailwindcss"
 }
 ---@diagnostic disable-next-line: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -24,7 +25,6 @@ for _, name in pairs(servers) do
     end
   end
 end
-
 lsp_installer.on_server_ready(function(server)
   -- Specify the default options which we'll use to setup all servers
   local default_opts = {

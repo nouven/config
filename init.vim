@@ -15,6 +15,9 @@ source ~/.config/nvim/config/floaterm.vim
 source ~/.config/nvim/config/treesitter.rc.vim
 
 
+
+
+
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
