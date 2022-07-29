@@ -10,6 +10,7 @@ Plug 'scrooloose/NERDTree' " File Explorer
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'miyakogi/seiya.vim' " clear and make transparent
+Plug 'folke/lsp-colors.nvim'
 
 "{{ code intellisense }}
 Plug 'neovim/nvim-lspconfig'
@@ -18,7 +19,6 @@ Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'folke/lsp-colors.nvim'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'

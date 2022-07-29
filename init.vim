@@ -5,7 +5,6 @@ source ~/.config/nvim/plugs.vim
 source ~/.config/nvim/config/lspconfig/lsp-installer.lua
 source ~/.config/nvim/config/lspconfig/lspsaga.rc.vim
 source ~/.config/nvim/config/lspconfig/lspkind.lua
-source ~/.config/nvim/config/lspconfig/lspcolors.vim
 source ~/.config/nvim/config/lspconfig/null-ls.lua
 source ~/.config/nvim/config/lspconfig/lsp-cmp.vim
 source ~/.config/nvim/config/telescope.rc.vim
@@ -66,6 +65,12 @@ hi cursorline cterm=NONE ctermbg=NONE
 hi Search cterm=bold ctermfg=black ctermbg=lightgrey
 hi Visual cterm=none ctermfg=darkcyan ctermbg=darkgrey
 
+hi Normal guibg=NONE 
+set termguicolors
+hi DiagnosticError guifg=Red
+hi DiagnosticWarn  guifg=DarkOrange
+hi DiagnosticInfo  guifg=yellow
+hi DiagnosticHint  guifg=Green
 
 
 

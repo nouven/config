@@ -5,9 +5,8 @@ local servers = {
   "emmet_ls",
   "clangd",
   "html5",
-  "jdtls",
-  "sumneko_lua",
   "eslint",
+  "sumneko_lua",
   "quick_lint_js",
   "tailwindcss"
 }
