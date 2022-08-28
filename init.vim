@@ -12,6 +12,7 @@ source ~/.config/nvim/config/colortheme.vim
 source ~/.config/nvim/config/lualine.vim
 source ~/.config/nvim/config/floaterm.vim
 source ~/.config/nvim/config/treesitter.rc.vim
+source ~/.config/nvim/config/barbar.lua
 
 
 
@@ -71,7 +72,7 @@ hi DiagnosticError guifg=Red
 hi DiagnosticWarn  guifg=DarkOrange
 hi DiagnosticInfo  guifg=yellow
 hi DiagnosticHint  guifg=Green
-
+set signcolumn=number
 
 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
@@ -79,4 +80,5 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 noremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+
 

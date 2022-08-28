@@ -1,4 +1,4 @@
 
 set background=dark
+"colorscheme solarized8
 colorscheme gruvbox
-"let g:gruvbox_transparent_bg=1

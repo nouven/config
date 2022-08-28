@@ -2,13 +2,13 @@ local lsp_installer = require("nvim-lsp-installer")
 local servers = {
   "pyright",
   "tsserver",
-  "emmet_ls",
   "clangd",
   "html5",
   "eslint",
   "sumneko_lua",
   "quick_lint_js",
-  "tailwindcss"
+  "tailwindcss",
+  "emmet_ls",
 }
 ---@diagnostic disable-next-line: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -27,9 +27,8 @@ end
 lsp_installer.on_server_ready(function(server)
   -- Specify the default options which we'll use to setup all servers
   local default_opts = {
-    on_attach = on_attach,
+    --on_attach = on_attach,
     capabilities = capabilities,
   }
   server:setup(default_opts)
-  --server:setup(default_opts)
 end)

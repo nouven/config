@@ -3,14 +3,14 @@ local saga = require 'lspsaga'
 saga.init_lsp_saga{
 -- default value
 use_saga_diagnostic_sign = true,
-error_sign = '',
+error_sign = '',
 warn_sign = '',
 hint_sign = '',
-infor_sign = '',
+infor_sign = '',
 --dianostic_header_icon = '',
 code_action_icon = ' ',
 code_action_prompt = {
-   enable = true,
+   enable = false,
    sign = true,
    sign_priority = 100,
    virtual_text = true,
@@ -36,6 +36,13 @@ rename_prompt_prefix = '➤',
 -- like server_filetype_map = {metals = {'sbt', 'scala'}}
 -- server_filetype_map = {}
 }
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+  vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = false
+  }
+)
 
 EOF
 noremap <silent> K :Lspsaga preview_definition<CR>

@@ -9,7 +9,8 @@ Plug 'scrooloose/NERDTree' " File Explorer
 " {{ colorstheme }}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'morhetz/gruvbox'
-Plug 'miyakogi/seiya.vim' " clear and make transparent
+Plug 'lifepillar/vim-solarized8'
+"Plug 'miyakogi/seiya.vim' " clear and make transparent
 Plug 'folke/lsp-colors.nvim'
 
 "{{ code intellisense }}
@@ -37,6 +38,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " {{icon}}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'romgrk/barbar.nvim'
 
 
 " {{ source code version control }}
