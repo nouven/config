@@ -1,10 +1,12 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.config/nvim/plugs.vim
+source ~/.config/nvim/config/keymaps.lua
 "source ~/.config/nvim/config/lspconfig/lspconfig.rc.vim
 source ~/.config/nvim/config/lspconfig/lsp-installer.lua
-source ~/.config/nvim/config/lspconfig/lspsaga.rc.vim
-source ~/.config/nvim/config/lspconfig/lspkind.lua
+"source ~/.config/nvim/config/lspconfig/lspsaga.rc.vim
+source ~/.config/nvim/config/lspconfig/lsp-saga.lua
+source ~/.config/nvim/config/lspconfig/lspkind.lua 
 source ~/.config/nvim/config/lspconfig/null-ls.lua
 source ~/.config/nvim/config/lspconfig/lsp-cmp.vim
 source ~/.config/nvim/config/telescope.rc.vim
@@ -13,6 +15,7 @@ source ~/.config/nvim/config/lualine.vim
 source ~/.config/nvim/config/floaterm.vim
 source ~/.config/nvim/config/treesitter.rc.vim
 source ~/.config/nvim/config/barbar.lua
+source ~/.config/nvim/config/nvim-rest.lua
 
 
 
@@ -44,7 +47,7 @@ set number	" Show line numbers
 set relativenumber
 set nowrap
 set linebreak	" Break lines at word (requires Wrap lines)
-"set showbreak=+++ 	" Wrap-broken line prefix
+set showbreak=+++ 	" Wrap-broken line prefix
 "set textwidth=100  " Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set errorbells	" Beep or flash screen on errors
@@ -60,6 +63,7 @@ set autowriteall	" Auto-write all file changes
 set undolevels=1000	" Number of undo levels
 set background=dark
 set hidden
+"set laststatus=0
 "set cursorline
 
 hi cursorline cterm=NONE ctermbg=NONE
@@ -70,15 +74,27 @@ hi Normal guibg=NONE
 set termguicolors
 hi DiagnosticError guifg=Red
 hi DiagnosticWarn  guifg=DarkOrange
-hi DiagnosticInfo  guifg=yellow
-hi DiagnosticHint  guifg=Green
+hi DiagnosticInfo  guifg=Yellow
+hi DiagnosticHint  guifg=Cyan
 set signcolumn=number
 
+hi Pmenu guibg=none
+hi LineNr guibg=none
 
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-noremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+"hi clear LineNr
+
+
+
+
+
+"nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+"nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+"nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+"nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+"noremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+
+
+
+
 
 

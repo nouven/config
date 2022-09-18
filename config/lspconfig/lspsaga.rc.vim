@@ -45,6 +45,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
 )
 
 EOF
-noremap <silent> K :Lspsaga preview_definition<CR>
-nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-nnoremap <silent>gr :Lspsaga rename<CR>
+##noremap <silent> K :Lspsaga preview_definition<CR>
+##nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+##nnoremap <silent>gr :Lspsaga rename<CR>

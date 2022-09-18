@@ -2,21 +2,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " {{ file search }}
 "Plug 'ellisonleao/gruvbox.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " {{ file browser }}
 Plug 'scrooloose/NERDTree' " File Explorer
 " {{ colorstheme }}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
+Plug 'svrana/neosolarized.nvim'
 "Plug 'miyakogi/seiya.vim' " clear and make transparent
 Plug 'folke/lsp-colors.nvim'
 
 "{{ code intellisense }}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -41,6 +41,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'romgrk/barbar.nvim'
 
+Plug 'rest-nvim/rest.nvim'
 
 " {{ source code version control }}
 call plug#end()

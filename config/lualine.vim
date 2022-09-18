@@ -1,14 +1,21 @@
 lua << EOF
+local custom_gruvbox = require'lualine.themes.gruvbox'
+custom_gruvbox.normal.c.bg = 'none'
+custom_gruvbox.insert.c.bg = 'none'
+custom_gruvbox.command.c.bg = 'none'
+custom_gruvbox.visual.c.bg = 'none'
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = custom_gruvbox,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
     globalstatus = false,
   },
+
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
