@@ -1,4 +1,4 @@
-nnoremap <silent>ff <cmd>Telescope find_files<cr>
+nnoremap <silent>ff <cmd>Telescope find_files hidden=true<cr>
 nnoremap <silent>fg <cmd>Telescope live_grep<cr>
 nnoremap <silent>fb <cmd>Telescope buffers<cr>
 nnoremap <silent>fh <cmd>Telescope help_tags<cr>
@@ -15,6 +15,7 @@ require('telescope').setup{
         ["q"] = actions.close
       },
     },
-  }
+    file_ignore_patterns = {"node_modules"},
+  },
 }
 EOF

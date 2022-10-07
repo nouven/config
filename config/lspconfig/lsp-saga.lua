@@ -21,7 +21,7 @@ saga.init_lsp_saga({
   -- is function type it will have a param `entry`
   -- entry is a table type has these filed
   -- { bufnr, code, col, end_col, end_lnum, lnum, message, severity, source }
-  diagnostic_header = { "😡", "😥", "😤", "😐" },
+  diagnostic_header = { "😡 ", "😥 ", "😤 ", "😐 " },
   -- preview lines of lsp_finder and definition preview
   max_preview_lines = 10,
   -- use emoji lightbulb in default
@@ -100,9 +100,31 @@ saga.init_lsp_saga({
   -- like server_filetype_map = { metals = { "sbt", "scala" } }
   server_filetype_map = {},
 })
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+
+
+local keymap = vim.api.nvim_set_keymap
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+-- Code action
+keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+keymap("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true })
+-- Rename
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+-- Definition preview
+keymap("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+-- Show line diagnostics
+keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+-- Show cursor diagnostic
+keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+-- Diagnsotic jump can use `<c-o>` to jump back
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+-- Outline
+keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", { silent = true })
+-- Hover Doc
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })

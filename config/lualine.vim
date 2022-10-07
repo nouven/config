@@ -1,9 +1,22 @@
 lua << EOF
 local custom_gruvbox = require'lualine.themes.gruvbox'
+--custom_gruvbox.normal.a.bg = 'none'
+custom_gruvbox.normal.a.bg = '#00334d'
+custom_gruvbox.normal.a.fg= 'lightgray'
+custom_gruvbox.normal.b.bg = 'none'
 custom_gruvbox.normal.c.bg = 'none'
+custom_gruvbox.insert.b.bg = 'none'
 custom_gruvbox.insert.c.bg = 'none'
+custom_gruvbox.command.b.bg = 'none'
 custom_gruvbox.command.c.bg = 'none'
+custom_gruvbox.visual.b.bg = 'none'
 custom_gruvbox.visual.c.bg = 'none'
+
+local custom_solarized = require'lualine.themes.solarized_dark'
+--custom_solarized.normal.c.bg = 'none'
+--custom_solarized.insert.c.bg = 'none'
+--custom_solarized.command.c.bg = 'none'
+--custom_solarized.visual.c.bg = 'none'
 
 require('lualine').setup {
   options = {
@@ -24,6 +37,7 @@ require('lualine').setup {
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
+
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},

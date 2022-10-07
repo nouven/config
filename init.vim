@@ -1,5 +1,6 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
+source ~/.config/nvim/base.lua
 source ~/.config/nvim/plugs.vim
 source ~/.config/nvim/config/keymaps.lua
 "source ~/.config/nvim/config/lspconfig/lspconfig.rc.vim
@@ -16,6 +17,7 @@ source ~/.config/nvim/config/floaterm.vim
 source ~/.config/nvim/config/treesitter.rc.vim
 source ~/.config/nvim/config/barbar.lua
 source ~/.config/nvim/config/nvim-rest.lua
+source ~/.config/nvim/config/nerdtree.vim
 
 
 
@@ -55,7 +57,7 @@ set visualbell	" Use visual bell (no beeping)
 set autoindent
 set smartindent
 set mouse=a
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set confirm	" Prompt confirmation dialogs
 set ruler	" Show row and column ruler information
 set autochdir	" Change working directory to open buffer
@@ -66,9 +68,6 @@ set hidden
 "set laststatus=0
 "set cursorline
 
-hi cursorline cterm=NONE ctermbg=NONE
-hi Search cterm=bold ctermfg=black ctermbg=lightgrey
-hi Visual cterm=none ctermfg=darkcyan ctermbg=darkgrey
 
 hi Normal guibg=NONE 
 set termguicolors
@@ -78,11 +77,18 @@ hi DiagnosticInfo  guifg=Yellow
 hi DiagnosticHint  guifg=Cyan
 set signcolumn=number
 
-hi Pmenu guibg=none
 hi LineNr guibg=none
+hi Pmenu guibg=none guifg='#fd5e53' 
+hi PmenuSel guibg=none guifg=cyan
+hi PmenuSbar guibg=none guifg=none
+hi PmenuThumb guibg=none guifg=none
 
-"hi clear LineNr
 
+
+
+"hi cursorline cterm=NONE ctermbg=none
+"hi Search cterm=bold ctermfg=black ctermbg=lightgrey
+"hi Visual cterm=none ctermfg=darkcyan ctermbg=darkgrey
 
 
 
@@ -92,9 +98,4 @@ hi LineNr guibg=none
 "nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 "nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 "noremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-
-
-
-
-
 
