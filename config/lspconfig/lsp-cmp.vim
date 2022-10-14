@@ -47,7 +47,9 @@ mapping = {
     documentation = {
        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
-    completion = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered({
+      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:PmenuSel,Search:None",
+    }),
   },
   experimental = {
      ghost_text = false,
@@ -74,6 +76,7 @@ mapping = {
    },
 
 })
+
 
 EOF
 
