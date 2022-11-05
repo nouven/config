@@ -11,6 +11,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'svrana/neosolarized.nvim'
+Plug 'joshdick/onedark.vim'
 
 "{{ code intellisense }}
 Plug 'neovim/nvim-lspconfig'
@@ -39,14 +40,10 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'romgrk/barbar.nvim'
 
-Plug 'rest-nvim/rest.nvim'
+"Plug 'rest-nvim/rest.nvim'
 
 " {{ source code version control }}
 call plug#end()
-
-
-
-
 
 
 
